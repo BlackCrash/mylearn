@@ -1,0 +1,13 @@
+.- Existen funciones 
+    .- PURAS: que su definición no permite cambios en sus props.
+    .- IMPURAS: que su definición si permite cambios en sus props.
+.- Todas las componentes no deben (por regla) cambiar sus props, existe otra forma de cambiar las salidas de las componentes y manejar estados para este fin. 
+
+.- Las funciones se puede cambiar a definición de clases, con esto ganamos dos cosas:
+    .- El manejo de estados de las componentes (que es propio de ellas)
+    .- El ciclo de vida de las componentes.
+.- En las componentes tipo clase, se accede a las props y states por medio del this.
+.- En las componentes, exiten las funciones:
+    .- render: que llevan el body, igual que en las funciones, el template html con los datos a pintar.
+    .- constructor: para definicir los valores iniciales de propiedades que pueda usar la componente más adelante en el la función render.
+    .- además en el constructor, se debe indicar como primera instrucción la llamada a 'super(props)'.
