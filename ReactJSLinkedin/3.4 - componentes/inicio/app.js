@@ -9,15 +9,28 @@
 /* para crear componentes directamente. */
 class HelloMessage extends React.Component {
    render() {
-     return <h1>Hello, {this.props.name}</h1>;
+    return (
+        <div>
+            <h1>Hello, {this.props.name}</h1>
+            <ul>
+                <li>
+                    {this.props.children}
+                </li>
+            </ul>
+        </div>
+    );
    }
 };
 
 class App extends React.Component {
     render() {
         return <fieldset>
-            <HelloMessage name="Eduardo" />
-            <HelloMessage name="Johana" />
+            <HelloMessage name="Eduardo">
+                Ese soy yo
+            </HelloMessage>
+            <HelloMessage name="Johana">
+                Ella es mi esposa
+            </HelloMessage>
         </fieldset>
     }
 };
